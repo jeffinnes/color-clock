@@ -22,15 +22,15 @@ export default {
 
       // Zero fill each segment if needed
       if (hour.length === 1) {
-        hour += `0${hour}`;
+        hour = `0${hour}`;
       }
 
       if (minute.length === 1) {
-        minute += `0${minute}`;
+        minute = `0${minute}`;
       }
 
       if (second.length === 1) {
-        second += `0${second}`;
+        second = `0${second}`;
       }
 
       this.hexTime = `#${hour}${minute}${second}`
