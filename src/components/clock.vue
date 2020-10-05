@@ -1,6 +1,6 @@
 <template>
-  <div :style="{ backgroundColor: hexTime }">
-    <h1>{{ hexTime }}</h1>
+  <div id="clock" :style="{ backgroundColor: hexTime }">
+    <span>{{ hexTime }}</span>
   </div>
 </template>
 
@@ -9,11 +9,11 @@ export default {
   name: 'clock',
   data () {
     return {
-      hexTime: '#000000'
+      hexTime: this.getHexTime()
     }
   },
-  mounted () {
-    setInterval(() => {
+  methods: {
+    getHexTime () {
       // Get the time and set segments
       let now = new Date(Date.now());
       let hour = `${now.getHours()}`;
@@ -33,12 +33,24 @@ export default {
         second = `0${second}`;
       }
 
-      this.hexTime = `#${hour}${minute}${second}`
+      return `#${hour}${minute}${second}`
+    },
+  },
+  mounted () {
+    setInterval(() => {
+      this.hexTime = this.getHexTime()
     }, 1000);
   }
 }
 </script>
 
 <style scoped>
-
+  #clock {
+    font-size: 10rem;
+    color: #eaf6e5;
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
