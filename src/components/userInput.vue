@@ -19,11 +19,11 @@ export default {
   data () {
     return {
       baseColor: "#000000",
-      base1: "#bb0000",
-      base2: "#bb00bb",
-      base3: "#00bb00",
-      base4: "#00bbbb",
-      base5: "#0000bb",
+      base1: "#a60000",
+      base2: "#a600a6",
+      base3: "#00a600",
+      base4: "#00a6a6",
+      base5: "#0000a6",
       base6: "#000000",
     }
   },
