@@ -81,7 +81,7 @@ export default {
   mounted() {
     setInterval(() => {
       this.getHexTime();
-    }, 1000);
+    }, 500);
   },
 };
 </script>
