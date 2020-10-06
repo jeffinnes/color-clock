@@ -1,6 +1,6 @@
 <template>
-  <clock baseColor="#000000"/>
-  <userInput />
+  <clock :baseColor="currentBaseColor" />
+  <userInput @update-base-color="updateBaseColor" />
 </template>
 
 <script>
@@ -12,7 +12,17 @@ export default {
   components: {
     clock,
     userInput,
-  }
+  },
+  data () {
+    return {
+      currentBaseColor: '#000000',
+    }
+  },
+  methods: {
+    updateBaseColor(newBaseColor) {
+      this.currentBaseColor = newBaseColor;
+    },
+  },
 }
 </script>
 
@@ -22,6 +32,7 @@ html, body {
   margin: 0;
   font-size: 10px;
 }
+
 #app {
   font-family: "GeosansLight-NMS", sans-serif;
   -webkit-font-smoothing: antialiased;

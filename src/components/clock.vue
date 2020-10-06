@@ -83,6 +83,14 @@ export default {
       this.getHexTime();
     }, 500);
   },
+  watch: {
+    baseColor(newColor) {
+      this.baseHour = newColor.slice(1,3);
+      this.baseMinute = newColor.slice(3,5);
+      this.baseSecond = newColor.slice(5,7);
+      this.getHexTime()
+    },
+  },
 };
 </script>
 

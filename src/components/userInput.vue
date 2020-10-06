@@ -30,6 +30,7 @@ export default {
   methods: {
     updatePreview(newBaseColor) {
       this.baseColor = newBaseColor;
+      this.$emit('update-base-color', newBaseColor);
     },
   }
 }
