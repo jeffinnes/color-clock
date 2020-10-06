@@ -7,6 +7,7 @@
 <script>
 export default {
   name: "clock",
+  props: ['baseColor'],
   data() {
     return {
       hexTime: '',
@@ -71,7 +72,11 @@ export default {
     },
   },
   beforeMount() {
-    this.getHexTime();
+    this.baseHour = this.baseColor.slice(1,3);
+    this.baseMinute = this.baseColor.slice(3,5);
+    this.baseSecond = this.baseColor.slice(5,7);
+    this.getHexTime()
+
   },
   mounted() {
     setInterval(() => {

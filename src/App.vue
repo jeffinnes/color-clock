@@ -1,5 +1,5 @@
 <template>
-  <clock />
+  <clock baseColor="#000000"/>
   <userInput />
 </template>
 
