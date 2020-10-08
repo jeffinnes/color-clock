@@ -9,7 +9,6 @@
     <div class="base-color-selector" :style="{backgroundColor: base5, color: '#fff'}" @click="updatePreview(base5)">{{ base5 }}</div>
     <div class="base-color-selector" :style="{backgroundColor: base6, color: '#fff'}" @click="updatePreview(base6)">{{ base6 }}</div>
   </div>
-  <div id="colorPreview">The color preview will go here</div>
 </div>
 </template>
 
