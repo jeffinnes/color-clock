@@ -1,6 +1,7 @@
 <template>
 <div id="userInput">
-  <p>The current base color code is {{ baseColor }}. You can set a different base color and see how it changes the day's colors below.</p>
+  <p>The current base color code is {{ baseColor }}.</p>
+  <p>You can set a different base color below and see how it changes the current time's color.</p>
   <div class="color-selections">
     <div class="base-color-selector" :style="{backgroundColor: base1}" @click="updatePreview(base1)">{{ base1 }}</div>
     <div class="base-color-selector" :style="{backgroundColor: base2}" @click="updatePreview(base2)">{{ base2 }}</div>
