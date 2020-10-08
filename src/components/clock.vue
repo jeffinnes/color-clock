@@ -137,7 +137,7 @@ export default {
 
 <style scoped>
 #clock {
-  font-size: 10rem;
+  font-size: 8.5rem;
   font-weight: 800;
   grid-column: span 12;
   display: flex;
