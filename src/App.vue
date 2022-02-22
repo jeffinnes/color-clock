@@ -5,7 +5,7 @@
 
 <script>
 import clock from './components/clock.vue';
-import userInput from './components/userInput';
+import userInput from './components/userInput.vue';
 
 export default {
   name: 'App',
