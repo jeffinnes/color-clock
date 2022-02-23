@@ -3,26 +3,15 @@
   <userInput @update-base-color="updateBaseColor" />
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import clock from './components/clock.vue';
 import userInput from './components/userInput.vue';
 
-export default {
-  name: 'App',
-  components: {
-    clock,
-    userInput,
-  },
-  data () {
-    return {
-      currentBaseColor: '#000000',
-    }
-  },
-  methods: {
-    updateBaseColor(newBaseColor) {
-      this.currentBaseColor = newBaseColor;
-    },
-  },
+const currentBaseColor = ref('#000000');
+
+function updateBaseColor(newBaseColor) {
+  currentBaseColor.value = newBaseColor;
 }
 </script>
 
