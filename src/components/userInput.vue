@@ -13,27 +13,23 @@
 </div>
 </template>
 
-<script>
-export default {
-  name: 'userInput',
-  data () {
-    return {
-      baseColor: "#000000",
-      base1: "#a60000",
-      base2: "#a600a6",
-      base3: "#00a600",
-      base4: "#00a6a6",
-      base5: "#0000a6",
-      base6: "#000000",
-    }
-  },
-  methods: {
-    updatePreview(newBaseColor) {
-      this.baseColor = newBaseColor;
-      this.$emit('update-base-color', newBaseColor);
-    },
-  }
-}
+<script setup>
+  import { ref } from 'vue';
+
+  const emit = defineEmits(['update-base-color']);
+
+  const baseColor = ref("#000000");
+  const base1 = "#a60000";
+  const base2 = "#a600a6";
+  const base3 = "#00a600";
+  const base4 = "#00a6a6";
+  const base5 = "#0000a6";
+  const base6 = "#000000";
+
+  function updatePreview(newBaseColor) {
+    baseColor.value = newBaseColor;
+    emit('update-base-color', newBaseColor);
+  };
 </script>
 
 <style scoped>
